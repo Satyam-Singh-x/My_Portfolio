@@ -600,19 +600,19 @@ elif page == "Contact":
     with col1:
         st.markdown("""
         **📧 Email**  
-        your-email@gmail.com  
+        singhsatyam.0912@gmail.com 
 
         **📞 Phone**  
-        +91-XXXXXXXXXX  
+        +91-8100463060  
         """)
 
     with col2:
         st.markdown("""
         **💼 LinkedIn**  
-        https://linkedin.com/in/your-linkedin  
+        https://www.linkedin.com/in/satyam-singh-61152a334/  
 
         **🐙 GitHub**  
-        https://github.com/your-github  
+        https://github.com/Satyam-Singh-x  
         """)
 
     st.markdown("---")
@@ -621,4 +621,5 @@ elif page == "Contact":
         "<p style='font-size:1rem;'>Thank you for taking the time to explore my work. I appreciate your interest and look forward to connecting.</p>",
         unsafe_allow_html=True
     )
+
 
