@@ -404,9 +404,9 @@ elif page == "Other Works":
 
         col1, col2 = st.columns(2)
         with col1:
-            st.link_button("🔗 GitHub", "YOUR_GITHUB_LINK")
+            st.link_button("🔗 GitHub", "https://github.com/Satyam-Singh-x/Snake-Game---Computer-Vision")
         with col2:
-            st.link_button("🎥 Demo Video", "YOUR_DEMO_LINK")
+            st.link_button("🎥 Demo Video", "https://youtu.be/ic80-0msJJk?si=0TxQJHY1Tin3yB96")
 
     # 4️⃣ Virtual Painter
     with st.expander("Virtual Painter (OpenCV)", expanded=False):
@@ -621,5 +621,6 @@ elif page == "Contact":
         "<p style='font-size:1rem;'>Thank you for taking the time to explore my work. I appreciate your interest and look forward to connecting.</p>",
         unsafe_allow_html=True
     )
+
 
 
