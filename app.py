@@ -388,35 +388,7 @@ elif page == "Other Works":
         with col2:
             st.link_button("🌐 Live App", "https://morning-buddy---smart-day-planner-satyam.streamlit.app/")
 
-    # 3️⃣ Hand-Gesture Controlled Snake Game
-    with st.expander("Hand-Gesture Controlled Snake Game (OpenCV)", expanded=False):
-        st.markdown("""
-        **Objective**  
-        Explore real-time hand tracking and gesture-based interaction using computer vision.
-
-        **Problem it solves**  
-        Demonstrates intuitive human–computer interaction without physical controllers.
-
-        **How it is built**
-        - OpenCV for real-time video processing
-        - Hand landmark detection for finger tracking
-        - Gesture-to-action mapping for game control
-
-        **Unique features**
-        - Real-time CV pipeline
-        - Gesture-based gameplay
-        - Visual feedback loop
-
-        **Tech stack**
-        - Python, OpenCV
-        """)
-
-        col1, col2 = st.columns(2)
-        with col1:
-            st.link_button("🔗 GitHub", "https://github.com/Satyam-Singh-x/Snake-Game---Computer-Vision")
-        with col2:
-            st.link_button("🎥 Demo Video", "https://youtu.be/ic80-0msJJk?si=0TxQJHY1Tin3yB96")
-
+    
     # 4️⃣ Virtual Painter
     with st.expander("Virtual Painter (OpenCV)", expanded=False):
         st.markdown("""
@@ -630,6 +602,7 @@ elif page == "Contact":
         "<p style='font-size:1rem;'>Thank you for taking the time to explore my work. I appreciate your interest and look forward to connecting.</p>",
         unsafe_allow_html=True
     )
+
 
 
 
