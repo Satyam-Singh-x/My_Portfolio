@@ -1,4 +1,5 @@
 import streamlit as st
+import pathlib
 st.set_page_config(
     page_title="Satyam | ML & GenAI Portfolio",
     page_icon="🤖",
@@ -159,8 +160,16 @@ if page == "About Me":
         st.link_button("🔗 GitHub", "https://github.com/Satyam-Singh-x")
     with col2:
         st.link_button("💼 LinkedIn", "https://www.linkedin.com/in/satyam-singh-61152a334/")
+    resume_path = pathlib.Path("Resume.pdf")
+
     with col3:
-        st.link_button("📄 Resume", "https://link-to-your-resume.pdf")
+        with open(resume_path, "rb") as pdf_file:
+            st.download_button(
+                label="📄 Download Resume",
+                data=pdf_file,
+                file_name="Resume.pdf",
+                mime="application/pdf"
+            )
 
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -621,6 +630,7 @@ elif page == "Contact":
         "<p style='font-size:1rem;'>Thank you for taking the time to explore my work. I appreciate your interest and look forward to connecting.</p>",
         unsafe_allow_html=True
     )
+
 
 
 
