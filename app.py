@@ -355,7 +355,7 @@ elif page == "Other Works":
         with col1:
             st.link_button("🔗 GitHub", "https://github.com/Satyam-Singh-x/GraphScribe-Technical-Blog-Writer")
         with col2:
-            st.link_button("🎥 Demo Video", "YOUR_DEMO_LINK")
+            st.link_button("🎥 Demo Video", "https://youtu.be/IkI2PtVQ1hk?si=58jksZGdgVyeGVdp")
 
     # 2️⃣ Udaya AI – Morning Assistant
     with st.expander("Udaya AI – Smart Morning Assistant", expanded=False):
@@ -630,6 +630,7 @@ elif page == "Contact":
         "<p style='font-size:1rem;'>Thank you for taking the time to explore my work. I appreciate your interest and look forward to connecting.</p>",
         unsafe_allow_html=True
     )
+
 
 
 
