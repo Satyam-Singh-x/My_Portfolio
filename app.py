@@ -87,6 +87,7 @@ page = st.sidebar.radio(
     "Go to",
     [
         "About Me",
+        "Experience",
         "Featured Projects",
         "Other Works",
         "Skills & Journey",
@@ -94,6 +95,7 @@ page = st.sidebar.radio(
         "Contact"
     ]
 )
+
 st.markdown("""
 <style>
 .about-card {
@@ -126,7 +128,7 @@ st.markdown("""
 from PIL import Image
 
 if page == "About Me":
-    profile_img = Image.open("profile.jpeg")  
+    profile_img = Image.open("profile.jpEg")  # make sure image is in same folder
 
     st.markdown('<div class="about-card">', unsafe_allow_html=True)
 
@@ -160,6 +162,7 @@ if page == "About Me":
         st.link_button("🔗 GitHub", "https://github.com/Satyam-Singh-x")
     with col2:
         st.link_button("💼 LinkedIn", "https://www.linkedin.com/in/satyam-singh-61152a334/")
+
     resume_path = pathlib.Path("Resume.pdf")
 
     with col3:
@@ -173,6 +176,86 @@ if page == "About Me":
 
     st.markdown('</div>', unsafe_allow_html=True)
 
+elif page == "Experience":
+    st.title("💼 Experience")
+
+    st.markdown(
+        "<p style='font-size:1rem; opacity:0.85;'>Industry-oriented projects and virtual simulation experiences demonstrating applied AI system design and real-world problem solving.</p>",
+        unsafe_allow_html=True
+    )
+
+    st.markdown("---")
+
+    # =========================
+    # BCG GenAI Job Simulation
+    # =========================
+
+    with st.expander("BCG GenAI Job Simulation – AI Financial Expert Chatbot", expanded=True):
+
+        st.markdown("""
+        **Organization:** Boston Consulting Group (BCG) – Virtual Job Simulation (Forage)  
+        **Role:** GenAI Project Contributor  
+        **Duration:** February 2026  
+
+        ---
+        ### 🎯 Project Objective
+        Build a dataset-restricted AI-powered financial expert chatbot capable of analyzing
+        SEC 10-K filings and performing structured financial reasoning without hallucinations.
+
+        ---
+        ### 🧠 What I Built
+
+        • Extracted and structured financial data from SEC 10-K filings (Microsoft, Apple, Tesla)  
+        • Performed Exploratory Data Analysis (EDA) to analyze financial trends  
+        • Engineered financial metrics including:
+            - Profit Margin  
+            - Debt Ratio  
+            - Revenue Growth  
+            - Net Income Growth  
+            - Asset Growth  
+            - CFO Margin  
+
+        • Designed and implemented a Retrieval-Augmented Generation (RAG) system  
+        • Built FAISS vector database using financial document embeddings  
+        • Implemented strict dataset-restricted prompt guardrails to eliminate hallucinations  
+        • Enabled dynamic financial metric calculations from raw values  
+        • Integrated conversational memory using LangGraph (thread-based persistence)  
+        • Developed a professional Streamlit-based chatbot UI with streaming LLM responses  
+        • Deployed using local LLM (Ollama – Qwen2.5)
+
+        ---
+        ### 🏗️ System Architecture
+        Dataset → Embeddings → FAISS Vector Store → Retriever → Guarded LLM → Financial Reasoning Output
+
+        ---
+        ### ⚙️ Tech Stack
+        Python, Pandas, FAISS, LangChain, LangGraph, Ollama, Streamlit
+        """)
+
+        col1, col2, col3 = st.columns(3)
+
+        with col1:
+            st.link_button(
+                "🔗 GitHub Repository",
+                "https://github.com/Satyam-Singh-x/enterprise-financial-rag-system"
+            )
+
+        with col2:
+            st.link_button(
+                "🎥 Working Demo",
+                "https://youtu.be/FhLKdoCkpbQ?si=6Bjd-eVPbYEE6t_l"
+            )
+
+        with col3:
+            cert_path = pathlib.Path("BCG-job_simulation_completion.pdf")
+
+            with open(cert_path, "rb") as cert_file:
+                st.download_button(
+                    label="📄 Download Certificate",
+                    data=cert_file,
+                    file_name="BCG_GenAI_Job_Simulation_Certificate.pdf",
+                    mime="application/pdf"
+                )
 
 
 elif page == "Featured Projects":
@@ -355,7 +438,7 @@ elif page == "Other Works":
         with col1:
             st.link_button("🔗 GitHub", "https://github.com/Satyam-Singh-x/GraphScribe-Technical-Blog-Writer")
         with col2:
-            st.link_button("🎥 Demo Video", "https://youtu.be/IkI2PtVQ1hk?si=58jksZGdgVyeGVdp")
+            st.link_button("🎥 Demo Video", "YOUR_DEMO_LINK")
 
     # 2️⃣ Udaya AI – Morning Assistant
     with st.expander("Udaya AI – Smart Morning Assistant", expanded=False):
@@ -388,7 +471,35 @@ elif page == "Other Works":
         with col2:
             st.link_button("🌐 Live App", "https://morning-buddy---smart-day-planner-satyam.streamlit.app/")
 
-    
+    # 3️⃣ Hand-Gesture Controlled Snake Game
+    with st.expander("Hand-Gesture Controlled Snake Game (OpenCV)", expanded=False):
+        st.markdown("""
+        **Objective**  
+        Explore real-time hand tracking and gesture-based interaction using computer vision.
+
+        **Problem it solves**  
+        Demonstrates intuitive human–computer interaction without physical controllers.
+
+        **How it is built**
+        - OpenCV for real-time video processing
+        - Hand landmark detection for finger tracking
+        - Gesture-to-action mapping for game control
+
+        **Unique features**
+        - Real-time CV pipeline
+        - Gesture-based gameplay
+        - Visual feedback loop
+
+        **Tech stack**
+        - Python, OpenCV
+        """)
+
+        col1, col2 = st.columns(2)
+        with col1:
+            st.link_button("🔗 GitHub", "YOUR_GITHUB_LINK")
+        with col2:
+            st.link_button("🎥 Demo Video", "YOUR_DEMO_LINK")
+
     # 4️⃣ Virtual Painter
     with st.expander("Virtual Painter (OpenCV)", expanded=False):
         st.markdown("""
@@ -581,16 +692,16 @@ elif page == "Contact":
     with col1:
         st.markdown("""
         **📧 Email**  
-        singhsatyam.0912@gmail.com 
+        singhsatyam.0912@gmail.com  
 
         **📞 Phone**  
-        +91-8100463060  
+        +91-8100463060 
         """)
 
     with col2:
         st.markdown("""
         **💼 LinkedIn**  
-        https://www.linkedin.com/in/satyam-singh-61152a334/  
+        https://www.linkedin.com/in/satyam-singh-61152a334/ 
 
         **🐙 GitHub**  
         https://github.com/Satyam-Singh-x  
@@ -602,9 +713,3 @@ elif page == "Contact":
         "<p style='font-size:1rem;'>Thank you for taking the time to explore my work. I appreciate your interest and look forward to connecting.</p>",
         unsafe_allow_html=True
     )
-
-
-
-
-
-
