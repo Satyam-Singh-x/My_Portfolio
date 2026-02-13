@@ -128,7 +128,7 @@ st.markdown("""
 from PIL import Image
 
 if page == "About Me":
-    profile_img = Image.open("profile.jpEg")  # make sure image is in same folder
+    profile_img = Image.open("profile.jpeg")  
 
     st.markdown('<div class="about-card">', unsafe_allow_html=True)
 
@@ -713,3 +713,4 @@ elif page == "Contact":
         "<p style='font-size:1rem;'>Thank you for taking the time to explore my work. I appreciate your interest and look forward to connecting.</p>",
         unsafe_allow_html=True
     )
+
