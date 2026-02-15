@@ -163,7 +163,7 @@ if page == "About Me":
     with col2:
         st.link_button("💼 LinkedIn", "https://www.linkedin.com/in/satyam-singh-61152a334/")
 
-    resume_path = pathlib.Path("Resume.pdf")
+    resume_path = pathlib.Path("Satyam_Singh_Resume-1.pdf")
 
     with col3:
         with open(resume_path, "rb") as pdf_file:
@@ -685,5 +685,6 @@ elif page == "Contact":
         "<p style='font-size:1rem;'>Thank you for taking the time to explore my work. I appreciate your interest and look forward to connecting.</p>",
         unsafe_allow_html=True
     )
+
 
 
